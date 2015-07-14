@@ -64,6 +64,8 @@ void Game::render()
 
 	SDL_RenderDrawLines(m_pRenderer, tab.obtenerSuperior(), 5);
 
+	SDL_RenderDrawLines(m_pRenderer, tab.obtenerPelota(), tab.obtenerTamanioPelota());
+
 	for(int x=0;x<tab.get_size_tablero();x++)
 	{
 		SDL_RenderDrawLines(m_pRenderer, tab.get_element_tablero(x), 5);

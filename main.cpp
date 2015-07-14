@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
 	g_game = new Game();
 	
-	g_game->init("Proyecto Final: Arkanoid", 100, 100, 600, 800, SDL_WINDOW_SHOWN);
+	g_game->init("Proyecto Final: Arkanoid", 100, 100, 650, 650, SDL_WINDOW_SHOWN);
 	
 	while(g_game->running())
 	{
