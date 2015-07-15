@@ -1,0 +1,4 @@
+$cat .gitignore 
+
+Pelota.cpp
+Pelota.h
