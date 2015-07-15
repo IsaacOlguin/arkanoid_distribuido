@@ -23,20 +23,29 @@ class Tablero
 			barra barraJ1;
 			barra barraJ2;
 			barra barraJ3;
+			barra pelota;
 			vector<barra> tablero;
 			int num_jugador;
 		};
 
 		Tablero();
 		~Tablero();
+		void inicializar_juego();
 		SDL_Point* obtenerBarra(int);
 		void desplazamientoBarra(int);
-		void inicializar_barras();
+		void inicializar_barras_jugadores();
+		void inicializar_tablero();
 		SDL_Point* obtenerSuperior();
 		void set_num_jugador(int);
+		void inicializar_barra(int,int,int,int,vector<SDL_Point> &);
+		void inicializar_pelota(int,int,int,int,vector<SDL_Point> &);
+		int get_size_tablero();
+		SDL_Point* get_element_tablero(int i);
+		SDL_Point* obtenerPelota();
+		int obtenerTamanioPelota();
 	private:
 		struct tablero tab;
-		int limiteX=800,limiteY=600;
+		int limiteX=650,limiteY=650;
 };
 
 
