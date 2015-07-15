@@ -10,7 +10,7 @@ Game::Game()
 {
 	m_bRunning = true;
 	srand (time(NULL));
-	tab = Tablero();
+	tab.inicializar_juego();
 }
 
 Game::~Game() 
@@ -63,6 +63,13 @@ void Game::render()
 	SDL_RenderDrawLines(m_pRenderer, tab.obtenerBarra(3), 5);
 
 	SDL_RenderDrawLines(m_pRenderer, tab.obtenerSuperior(), 5);
+
+	SDL_RenderDrawLines(m_pRenderer, tab.obtenerPelota(), tab.obtenerTamanioPelota());
+
+	for(int x=0;x<tab.get_size_tablero();x++)
+	{
+		SDL_RenderDrawLines(m_pRenderer, tab.get_element_tablero(x), 5);
+	}
 
 	SDL_RenderPresent(m_pRenderer);	
 
